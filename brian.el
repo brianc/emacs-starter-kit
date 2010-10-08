@@ -10,4 +10,6 @@
 (set-frame-width (selected-frame) 150)
 (set-frame-height (selected-frame) 50)
 (set-frame-position (selected-frame) 40 40)
+(set-frame-parameter (selected-frame) 'cursor-type 'bar)
+(blink-cursor-mode)
 
