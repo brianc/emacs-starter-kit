@@ -12,4 +12,4 @@
 (set-frame-height (selected-frame) 40)
 (set-frame-parameter (selected-frame) 'cursor-type 'bar)
 (blink-cursor-mode)
-
+(global-set-key (quote [(control return)]) (lambda () (interactive) (newline-and-indent) (newline-and-indent) (previous-line) (indent-according-to-mode)))
