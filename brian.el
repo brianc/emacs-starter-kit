@@ -4,7 +4,7 @@
          (getenv "PATH")))
 
 (push "/usr/local/bin" exec-path)
-
+(global-set-key [f5] 'revert-buffer)
 (set-face-attribute 'default nil :height 170)
 (if window-system (color-theme-zenburn))
 (set-frame-position (selected-frame) 40 40)
