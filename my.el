@@ -25,3 +25,6 @@
    (newline-and-indent)
    (previous-line)
    (indent-according-to-mode)))
+
+;;.org uses org-mode
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
