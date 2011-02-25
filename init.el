@@ -71,11 +71,7 @@
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
 (if (file-exists-p user-specific-dir)
-  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
-
+    (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 ;;; init.el ends here
-(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
-(require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'load-path "~/.emacs.d/vendor/nginx-mode")
-(require 'nginx-mode)
+
+(load (concat dotfiles-dir "my.el"))
