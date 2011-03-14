@@ -28,3 +28,13 @@
 
 ;;.org uses org-mode
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+;; rcirc config
+(add-hook 'rcirc-mode-hook
+          (lambda ()
+            (flyspell-mode 1)
+            (rcirc-track-minor-mode 1)))
+(setq rcirc-default-nick "brianc")
+
+(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
+(require 'mustache-mode)
