@@ -36,5 +36,10 @@
             (rcirc-track-minor-mode 1)))
 (setq rcirc-default-nick "brianc")
 
+(defun fullscreen ()
+       (interactive)
+       (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+	    		 '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
+
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (require 'mustache-mode)
