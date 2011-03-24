@@ -9,6 +9,7 @@
 
 (if window-system (color-theme-zenburn))
 
+(yas/load-directory "~/.emacs.d/snippets/")
 ;; hooray hippie-expand
 (setq hippie-expand-try-functions-list (cons 'yas/hippie-try-expand hippie-expand-try-functions-list))
 (global-set-key [(control tab)] 'hippie-expand)
