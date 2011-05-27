@@ -7,6 +7,11 @@
 (require 'coffee-mode)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 
+;; load magit
+(add-to-list 'load-path "~/.emacs.d/vendor/magit")
+(require 'magit)
+
+
 (if window-system (color-theme-zenburn))
 
 (yas/load-directory "~/.emacs.d/snippets/")
