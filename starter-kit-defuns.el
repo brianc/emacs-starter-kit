@@ -73,9 +73,9 @@ Symbols matching the text at point are put first in the completion list."
   (make-local-variable 'column-number-mode)
   (column-number-mode t))
 
-(defun local-comment-auto-fill ()
-  (set (make-local-variable 'comment-auto-fill-only-comments) t)
-  (auto-fill-mode t))
+;; (defun local-comment-auto-fill ()
+;;   (set (make-local-variable 'comment-auto-fill-only-comments) t)
+;;   (auto-fill-mode t))
 
 (defun turn-on-hl-line-mode ()
   (if window-system (hl-line-mode t)))
