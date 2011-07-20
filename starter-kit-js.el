@@ -14,5 +14,12 @@
      `(("\\(function *\\)("
         (0 (progn (compose-region (match-beginning 1) (match-end 1) "ƒ") nil))))))
 
+(eval-after-load 'js
+  '(progn (define-key js-mode-map "{" 'paredit-open-curly)
+          (define-key js-mode-map "}" 'paredit-close-curly-and-newline)
+          ;; fixes problem with pretty function font-lock
+          (define-key js-mode-map (kbd ",") 'self-insert-command)))
+
+
 (provide 'starter-kit-js)
 ;;; starter-kit-js.el ends here
