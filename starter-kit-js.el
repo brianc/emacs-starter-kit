@@ -7,6 +7,12 @@
 (add-hook 'js-mode-hook 'esk-paredit-nonlisp)
 (add-hook 'js-mode-hook 'run-coding-hook)
 (setq js-indent-level 2)
+
+(add-hook 'js-mode-hook
+          (lambda ()
+            (message "js mode")
+            (define-key js-mode-map (kbd ",") 'self-insert-command)))
+
 ;;nice function
 (if window-system
     (font-lock-add-keywords
